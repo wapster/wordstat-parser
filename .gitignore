@@ -1,0 +1,6 @@
+config/*.txt
+vendor/
+test.php
+log.txt
+
+
