@@ -5,6 +5,7 @@ use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Exception;
 
+use Facebook\WebDriver\Proxy;
 
 class Driver {
 
@@ -14,6 +15,7 @@ class Driver {
         $options = new ChromeOptions();
             $options->addArguments( [
                 // '--headless',
+                '--proxy-server=195.209.145.29:51493',
                 '--start-maximized',
                 '--no-sandbox',
                 '--disable-dev-shm-usage',
