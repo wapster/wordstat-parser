@@ -16,8 +16,6 @@ class Driver {
             $options->addArguments( [
                 // '--headless',
                 // '--proxy-server=195.209.145.29:51493',
-                // '--proxy-auth=wBke293v:vTpBk3bP',
-                // '--proxy-server=195.209.145.29:51493',
                 '--start-maximized',
                 '--no-sandbox',
                 '--disable-dev-shm-usage',
