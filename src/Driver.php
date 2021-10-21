@@ -9,23 +9,24 @@ use Facebook\WebDriver\Proxy;
 
 class Driver {
 
-    public function get() 
+    
+    public function get($proxy) 
     {
         $host = 'http://localhost:4444';
         $options = new ChromeOptions();
-            $options->addArguments( [
-                // '--headless',
-                // '--proxy-server=195.209.145.29:51493',
-                '--start-maximized',
-                '--no-sandbox',
-                '--disable-dev-shm-usage',
-                ] );
+        $options->addArguments([
+            // '--headless',
+            '--proxy-server=' . $proxy,
+            '--start-maximized',
+            '--no-sandbox',
+            '--disable-dev-shm-usage',
+        ]);
 
-            $caps = DesiredCapabilities::chrome();
-            $caps->setCapability(ChromeOptions::CAPABILITY, $options);
-            $driver = RemoteWebDriver::create($host, $caps, 90000, 90000);
+        $caps = DesiredCapabilities::chrome();
+        $caps->setCapability(ChromeOptions::CAPABILITY, $options);
+        $driver = RemoteWebDriver::create($host, $caps, 90000, 90000);
 
-            return $driver;
+        return $driver;
     }
 
 
