@@ -5,18 +5,20 @@ use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Exception;
 
-use Facebook\WebDriver\Proxy;
-
-class Driver {
+class Driver extends Proxys 
+{
 
     
-    public function get($proxy) 
+    public function get() 
     {
+        $proxy = $this->getProxy();
+
         $host = 'http://localhost:4444';
+        
         $options = new ChromeOptions();
         $options->addArguments([
             // '--headless',
-            '--proxy-server=' . $proxy,
+            '--proxy-server=' . $proxy, // закомментировать, если не нужны прокси
             '--start-maximized',
             '--no-sandbox',
             '--disable-dev-shm-usage',
