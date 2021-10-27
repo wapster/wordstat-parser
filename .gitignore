@@ -1,6 +1,6 @@
 config/*.txt
 vendor/
-test.php
+test*.php
 log.txt
 
 
