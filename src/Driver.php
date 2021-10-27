@@ -11,7 +11,7 @@ class Driver extends Proxys
     
     public function get() 
     {
-        $proxy = $this->getProxy();
+        $proxy = $this->getProxy(); // закомментировать, если не нужны прокси
 
         $host = 'http://localhost:4444';
         
