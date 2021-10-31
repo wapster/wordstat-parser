@@ -24,8 +24,6 @@ function debug($str){
 $proxy = new Proxys();
 $ip = $proxy->getProxy();
 
-$parser = new Parser();
-
 $driver_obj = new Driver();
 $driver = $driver_obj->get();
 
